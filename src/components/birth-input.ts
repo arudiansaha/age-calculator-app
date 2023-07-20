@@ -4,6 +4,25 @@ class BirthInput extends HTMLElement {
   }
 
   private renderPage() {
+    const arrowIcon = `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="46"
+        height="44"
+        viewBox="0 0 46 44"
+      >
+        <g 
+          fill="none" 
+          stroke="#FFF" 
+          stroke-width="2"
+        >
+          <path
+            d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+          />
+        </g>
+      </svg>
+    `;
+
     this.setAttribute('class', 'birth__input');
     this.innerHTML = `
       <form class="form" id="birthForm">
@@ -54,11 +73,7 @@ class BirthInput extends HTMLElement {
             form="birthForm"
             aria-label="submit birthday"
           >
-            <img
-              src="./assets/images/icon-arrow.svg"
-              alt="arrow"
-              aria-label="Submit birthday"
-            >
+            ${arrowIcon}
           </button>
         </fieldset>
       </form>

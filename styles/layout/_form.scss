@@ -62,11 +62,6 @@
     background-color: $color-primary-00;
     color: $color-neutral-00;
 
-    &>svg {
-      width: 24px;
-      height: 24px;
-    }
-
     &:hover {
       transform: scale(1.05);
       filter: brightness(1.1);
