@@ -1,0 +1,52 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.birth {
+  width: min(100% - 2rem, 70ch);
+  height: fit-content;
+  margin-inline: auto;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  border-bottom-right-radius: 5rem;
+  background-color: $color-neutral-00;
+  color: $color-neutral-04;
+
+  &__input,
+  &__output {
+    display: block;
+    margin-block: 1.5rem;
+  }
+
+  &__text {
+    @include font-size('5xl');
+
+    font-weight: 800;
+    font-style: italic;
+  }
+
+  &__number {
+    color: $color-primary-00;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .birth {
+    &__text {
+      @include font-size('6xl');
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .birth {
+    padding-inline: 3rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .birth {
+    &__text {
+      @include font-size('7xl');
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@use 'variables' as *;
+
+@mixin font-size($params) {
+
+  @each $name,
+  $size,
+  $line-height in $font-sizes {
+    @if $params ==$name {
+      font-size: $size;
+      line-height: $line-height;
+    }
+  }
+}
+
+@mixin field-reset {
+  border: none;
+  padding: 0;
+}
