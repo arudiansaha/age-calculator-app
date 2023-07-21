@@ -69,6 +69,7 @@ class BirthInput extends HTMLElement {
           <hr class="form__line">
           <button
             class="form__submit"
+            id="birthSubmit"
             type="submit"
             form="birthForm"
             aria-label="submit birthday"
