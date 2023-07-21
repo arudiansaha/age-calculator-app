@@ -27,6 +27,11 @@
     font-weight: 700;
     border: 1px solid $color-neutral-02;
     border-radius: 0.5rem;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary-00;
+    }
   }
 
   &__field {
@@ -61,6 +66,7 @@
     border-radius: 9999px;
     background-color: $color-primary-00;
     color: $color-neutral-00;
+    cursor: pointer;
 
     &:hover {
       transform: scale(1.05);
@@ -70,7 +76,7 @@
 
     &:active {
       transform: scale(0.95);
-      filter: brightness(0.9);
+      background-color: $color-neutral-04;
     }
   }
 }
