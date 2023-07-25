@@ -11,10 +11,10 @@ app!.innerHTML = `
 `;
 
 const submitInitiator = new SubmitInitiator({
-  button: document.querySelector<HTMLButtonElement>('#birthSubmit')!,
-  day: document.querySelector<HTMLInputElement>('#birthDay')!,
-  month: document.querySelector<HTMLInputElement>('#birthMonth')!,
-  year: document.querySelector<HTMLInputElement>('#birthYear')!,
+  form: document.querySelector<HTMLFormElement>('#birthForm')!,
+  day: document.querySelector<HTMLInputElement>('#birthDayInput')!,
+  month: document.querySelector<HTMLInputElement>('#birthMonthInput')!,
+  year: document.querySelector<HTMLInputElement>('#birthYearInput')!,
 });
 
 submitInitiator.init();

@@ -27,43 +27,64 @@ class BirthInput extends HTMLElement {
     this.innerHTML = `
       <form class="form" id="birthForm">
         <fieldset class="form__field">
-          <label class="form__label">Day</label>
+          <label
+            class="form__label"
+            id="birthDayLabel"
+            for="birthDayInput"
+            >
+              Day
+            </label>
           <input
             class="form__input"
             type="number"
-            id="birthDay"
-            name="birthDay"
+            id="birthDayInput"
+            name="birthDayInput"
             min="1"
             max="31"
             placeholder="DD"
             required
           >
+          <p class="form__message" id="birthDayMessage"></p>
         </fieldset>
         <fieldset class="form__field">
-          <label class="form__label">Month</label>
+          <label
+            class="form__label"
+            id="birthMonthLabel"
+            for="birthMonthInput"
+          >
+            Month
+          </label>
           <input
             class="form__input"
             type="number"
-            id="birthMonth"
-            name="birthMonth"
+            id="birthMonthInput"
+            name="birthMonthInput"
             min="1"
             max="12"
             placeholder="MM"
             required
           >
+          <p class="form__message" id="birthMonthMessage"></p>
         </fieldset>
         <fieldset class="form__field">
-          <label class="form__label">Year</label>
+          <label
+            class="form__label"
+            id="birthYearLabel"
+            for="birthYearInput"
+          >
+            Year
+          </label>
           <input
             class="form__input"
             type="number"
-            id="birthYear"
-            name="birthYear"
-            min="1900"
+            id="birthYearInput"
+            name="birthYearInput"
+            min="1"
             max="2020"
             placeholder="YYYY"
             required
           >
+          <p class="form__message" id="birthYearMessage"></p>
         </fieldset>
         <fieldset class="form__field--custom">
           <hr class="form__line">

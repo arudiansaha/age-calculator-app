@@ -16,6 +16,10 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: $color-neutral-03;
+
+    &.invalid {
+      color: $color-primary-01;
+    }
   }
 
   &__input {
@@ -32,6 +36,10 @@
       outline: none;
       border-color: $color-primary-00;
     }
+
+    &.invalid {
+      border-color: $color-primary-01;
+    }
   }
 
   &__field {
@@ -44,6 +52,14 @@
       grid-column: 1 / -1;
       margin-block-start: 1rem;
     }
+  }
+
+  &__message {
+    @include font-size('xs');
+
+    margin-block: 0.5rem;
+    font-style: italic;
+    color: $color-primary-01;
   }
 
   &__line {
