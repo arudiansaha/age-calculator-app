@@ -72,9 +72,15 @@ class SubmitInitiator {
 
   private calculateDate() {
     const currentMonth = new Date().getMonth() + 1;
-    const day = this.calculateDay(Number.parseInt(this.day.value, 10));
-    const month = this.calculateMonth(Number.parseInt(this.month.value, 10));
-    let year = this.calculateYear(Number.parseInt(this.year.value, 10));
+    const date = new Date(
+      Number.parseInt(this.year.value, 10),
+      Number.parseInt(this.month.value, 10) - 1,
+      Number.parseInt(this.day.value, 10),
+    );
+
+    const day = this.calculateDay(date.getDate());
+    const month = this.calculateMonth(date.getMonth() + 1);
+    let year = this.calculateYear(date.getFullYear());
 
     if (Number.parseInt(this.month.value, 10) > currentMonth) {
       year -= 1;
@@ -114,6 +120,15 @@ class SubmitInitiator {
     let currentDay = new Date().getDate();
     const lastMonth = new Date().getMonth() - 1;
     let lastDayOfLastMonth = this.getLastDayOfMonth(lastMonth);
+
+    if (Number.parseInt(this.day.value, 10) !== number) {
+      const labelElement = document.querySelector<HTMLLabelElement>('#birthDayLabel')!;
+      const messageElement = document.querySelector<HTMLSpanElement>('#birthDayMessage')!;
+
+      this.day.classList.add('invalid');
+      labelElement.classList.add('invalid');
+      messageElement.innerText = 'Must be a valid day';
+    }
 
     if (number > currentDay) {
       lastDayOfLastMonth -= 1;
